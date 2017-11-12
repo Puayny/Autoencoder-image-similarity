@@ -14,5 +14,5 @@ For the MNIST dataset, where most images are centered, this similarity compariso
 For the cifar-100 dataset, images with a similar background color / shape are deemed to be similar, rather than images of the same type of object (e.g. with the current similarity metric, flowers are not usually deemed to be similar to other flowers).<br><br>
 As a baseline comparison, I used binary cross entropy to determine image similarity based on the original image dimensions (rather than the encoded dimensions). 
 Much like the results from the reduced dimensions, images with a similar background color / shape are deemed to be similar.<br><br>
-My original hope was that the image features learned by the autoencoder in the encoded layer would have lead to a decent way of determining image similarity.
+My original hope was that the image features learned by the autoencoder in the encoded layer would have led to a decent way of determining image similarity.
 Unfortunately, since the autoencoder simply tries to reconstruct the original image, it does not necessarily encode features which would have been useful in determining image similarity (in the sense of flowers being deemed to be similar to flowers). Also, the similarity metric places equal focus on all parts of the images, rather than the parts which could be more important (e.g. the subject of the image).
